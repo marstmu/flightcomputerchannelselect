@@ -25,7 +25,7 @@ void setup()
 
 void loop() {
     char receivedChar = Serial5.read();
-    Serial.println(receivedChar);
+    Serial.print(receivedChar);
     delay(100);
 
 }
