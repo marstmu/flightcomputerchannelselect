@@ -19,7 +19,7 @@ void setup()
     digitalWrite(setPin, LOW);
     delay(1000);
 
-    Serial5.println("AT+C021");
+    Serial5.println("AT+C021"); //THIS IS THE LINE TO CHANGE CHANNELS AT+C'XXX' REPLACE XXX WITH CHANNEL NUMBER
     delay(1000);
 }
 
