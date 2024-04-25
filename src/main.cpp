@@ -1,31 +1,24 @@
-
 #include <Arduino.h>
 #include <Wire.h>
-
-#define setPin 2
+#define setPin 6
 
 void setup()
 {
     delay(1000);
 
-    Serial5.begin(9600); // antenna
+    Serial2.begin(9600); // antenna
     Serial.begin(9600);
     
     delay(1000);
-
-    Serial.print("testing");
-
     pinMode(setPin, OUTPUT);
     digitalWrite(setPin, LOW);
     delay(1000);
-
-    Serial5.println("AT+C021"); //THIS IS THE LINE TO CHANGE CHANNELS AT+C'XXX' REPLACE XXX WITH CHANNEL NUMBER
-    delay(1000);
 }
-
 void loop() {
-    char receivedChar = Serial5.read();
-    Serial.print(receivedChar);
-    delay(100);
-
+  if(Serial2.available()){       // If Arduino's HC12 rx buffer has data
+    Serial.write(Serial2.read());        // Send the data to the computer
+    }
+  if(Serial.available()){          // If Arduino's computer rx buffer has data
+    Serial2.write(Serial.read());       // Send that data to serial
+  }
 }
