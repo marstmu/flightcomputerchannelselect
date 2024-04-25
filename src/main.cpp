@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 #define setPin 6
-
+// code assumes hc-12 is on Serial2
 void setup()
 {
     delay(1000);
@@ -11,7 +11,7 @@ void setup()
     
     delay(1000);
     pinMode(setPin, OUTPUT);
-    digitalWrite(setPin, LOW);
+    digitalWrite(setPin, LOW); // set the pin to low to enter programming mode
     delay(1000);
 }
 void loop() {
