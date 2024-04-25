@@ -43,3 +43,5 @@ https://www.instructables.com/Long-Range-18km-Arduino-to-Arduino-Wireless-Commun
 https://www.allaboutcircuits.com/projects/understanding-and-implementing-the-hc-12-wireless-transceiver-module/
 
 Data sheet: https://www.elecrow.com/download/HC-12.pdf
+
+https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-12-long-range-wireless-communication-module/
